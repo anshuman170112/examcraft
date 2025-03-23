@@ -1,0 +1,105 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6dd66d;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #83adfa;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.upload-section, .topic-list-section, .generate-section, .sets-section {
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* File Input */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+/* Topic List */
+#topicList {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+}
+
+.topic-item {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Set Container */
+#setsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.set-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.set-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}

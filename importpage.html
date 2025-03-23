@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic-Based Question Paper Generator</title>
+    <link rel="stylesheet" href="styleimportpage.css">
+</head>
+
+<body>
+    <header>
+        <h1>Topic-Based Question Paper Generator</h1>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Topics</h2>
+            <input type="file" id="topicFile" accept=".json" />
+            <button id="uploadBtn">Upload Topics</button>
+        </section>
+
+        <section class="topic-list-section">
+            <h2>Imported Topics</h2>
+            <div id="topicList">
+                <!-- List of topics will appear here after upload -->
+            </div>
+        </section>
+
+        <section class="generate-section">
+            <h2>Generate Question Sets</h2>
+            <label for="numSets">Number of Sets:</label>
+            <select id="numSets">
+                <option value="1">1 Set</option>
+                <option value="2">2 Sets</option>
+                <option value="3">3 Sets</option>
+            </select>
+            <button id="generateSetsBtn">Generate Question Sets</button>
+        </section>
+
+        <section id="generatedSets" class="sets-section">
+            <h2>Generated Question Sets</h2>
+            <div id="setsContainer">
+                <!-- Generated sets will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Question Paper Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

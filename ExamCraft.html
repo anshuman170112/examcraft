@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamCraft - Manage and Generate Exam Sets</title>
+    <link rel="stylesheet" href="stylexamcraft.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192x192.png">
+
+</head>
+<body>
+    <header>
+        <h1>ExamCraft</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#question-bank">Question Bank</a></li>
+                <li><a href="#generate-set">Generate Set</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Questions</h3>
+                    <p id="totalQuestions">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sets Generated</h3>
+                    <p id="setsGenerated">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question Bank Section -->
+        <section id="question-bank">
+            <h2>Question Bank</h2>
+            <button id="addQuestionBtn">Add New Question</button>
+            <div id="questionsList">
+                <!-- Questions will be added here dynamically -->
+            </div>
+        </section>
+
+        <!-- Generate Set Section -->
+        <section id="generate-set">
+            <h2>Generate Question Set</h2>
+            <form id="generateForm">
+                <label for="setName">Set Name</label>
+                <input type="text" id="setName" required>
+
+                <label for="totalMarks">Total Marks</label>
+                <input type="number" id="totalMarks" required min="1">
+
+                <div>
+                    <label>Easy</label>
+                    <input type="range" id="easyPercent" min="0" max="100" value="30">
+                    <span id="easyValue">30%</span>
+                </div>
+                <div>
+                    <label>Medium</label>
+                    <input type="range" id="mediumPercent" min="0" max="100" value="40">
+                    <span id="mediumValue">40%</span>
+                </div>
+                <div>
+                    <label>Hard</label>
+                    <input type="range" id="hardPercent" min="0" max="100" value="30">
+                    <span id="hardValue">30%</span>
+                </div>
+
+                <button type="submit">Generate Set</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Add Question Modal -->
+    <div id="addQuestionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Add New Question</h3>
+            <form id="addQuestionForm">
+                <label for="questionText">Question</label>
+                <textarea id="questionText" required></textarea>
+                <label for="answer">Answer</label>
+                <input type="text" id="answer" required>
+                <button type="submit">Add Question</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("Service Worker Registered"))
+            .catch((error) => console.log("Service Worker Registration Failed", error));
+        }
+      </script>
+      
+</body>
+</html>
